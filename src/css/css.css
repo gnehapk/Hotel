@@ -194,10 +194,6 @@ h2 {
 	font-weight: bold;
 }
 
-.rooms_table .select_room {
-    width: 10%;
-    padding: 5px;
-}
 
 .rooms_table .room_occupancy {
 	text-align: center;

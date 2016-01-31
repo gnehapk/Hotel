@@ -23,7 +23,7 @@
             var oThis = this;
 
             oThis.doCarousel();
-            //oThis.doRooms();
+            oThis.doRooms();
             //oThis.doReviews();
         },
 
@@ -36,7 +36,7 @@
 
         doRooms: function () {
             var oThis = this,
-                rooms = new Rooms();
+                rooms = new App.Rooms(oThis.roomsContainer);
 
             rooms.show(oThis.roomsContainer);
         },
