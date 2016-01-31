@@ -12,7 +12,6 @@
     function Hotel() {
         var oThis = this;
 
-        //oThis.el = document.querySelector(".hotel");
         oThis.imageContainer = document.querySelector(".photos");
         oThis.roomsContainer = document.querySelector(".rooms_table_form");
         oThis.reviewsContainer = document.querySelector(".reviews_list");
@@ -24,7 +23,7 @@
 
             oThis.doCarousel();
             oThis.doRooms();
-            //oThis.doReviews();
+            oThis.doReviews();
         },
 
         doCarousel: function () {
@@ -42,9 +41,10 @@
         },
 
         doReviews: function () {
-            var reviews = new Reviews();
+            var oThis = this,
+                reviews = new App.ReviewList(oThis.reviewsContainer, 5); //5 is page size
 
-            reviews.show(oThis.reviewsContainer);
+            reviews.show();
         }
     };
 }(window.Hotel || (window.Hotel = {})));
